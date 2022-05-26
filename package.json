@@ -1,6 +1,6 @@
 {
   "name": "ncv_platforme",
-  "homepage": "https://inefablekoumba.github.io/ncv",
+  "homepage": "https://ncv.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
