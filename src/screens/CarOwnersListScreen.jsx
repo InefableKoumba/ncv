@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Modal, Table } from '@mantine/core';
 
-const baseURL = "http://franzer.net/api"
+const baseURL = "https://franzer.net/api"
 
 export function CarOwnersListScreen() {
     const [carOwners, setcarOwners] = useState([])

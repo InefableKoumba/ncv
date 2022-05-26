@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import QRCode from 'qrcode.react';
 import ReactToPrint from 'react-to-print';
 
-const baseURL = "http://franzer.net/api"
+const baseURL = "https://franzer.net/api"
 
 export function CarsListScreen() {
     const [carId, setcarId] = useState("")

@@ -38,11 +38,12 @@ export function Bill({ data }) {
                 <div className='flex flex-col my-10'>
                     <span className='text-xl font-bold'>NCV - Numerical Cars Verification</span>
                     <span>22 Rue Bakoukouyas, Poto-Poto II, Brazzaville</span>
-                    <span>Téléphone : +242 665 07 50</span>
+                    <span>Téléphone : +242066650750</span>
                 </div>
                 <div className='bg-gray-100 p-8 rounded flex w-max gap-x-20'>
                     <div className='flex flex-col gap-y-2'>
                         <span className='whitespace-nowrap'>Paiement éffectué le :</span>
+                        <span className='whitespace-nowrap'>Paiement éffectué à :</span>
                         <span className='whitespace-nowrap'>Expire le :</span>
                         <span className='whitespace-nowrap'>ID du client :</span>
                         <span className='whitespace-nowrap'>Nom du client:</span>
@@ -50,6 +51,8 @@ export function Bill({ data }) {
                     </div>
                     <div className='flex flex-col gap-y-2'>
                         <span className='whitespace-nowrap'>{readableCreationDate}</span>
+                        <span className='whitespace-nowrap'>14H37
+                        </span>
                         <span className='whitespace-nowrap'>{readableExpirationDate}</span>
                         <span className='whitespace-nowrap'>{carOwnerId}</span>
                         <span className='whitespace-nowrap'>{carOwnerName} {carOwnerFirstName}</span>
@@ -95,7 +98,7 @@ export function Bill({ data }) {
                     </div>
                     <div className='flex flex-col'>
                         <span className='text-lg font-bold'>Coordonnées</span>
-                        <span className='text-sm'>Téléphone : +242068801986</span>
+                        <span className='text-sm'>Téléphone : +242066650750</span>
                         <span className='text-sm'>Email : contact@franzer.org</span>
                         <span className='text-sm'>www.franzer.org</span>
                     </div>

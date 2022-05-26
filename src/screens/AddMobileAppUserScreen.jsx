@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from 'react-modal';
 
-const baseURL = "http://franzer.net/api";
+const baseURL = "https://franzer.net/api";
 
 export function AddMobileAppUserScreen() {
     const [name, setname] = useState("")

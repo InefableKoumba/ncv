@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const baseURL = "http://franzer.net/api"
+const baseURL = "https://franzer.net/api"
 
 export function MobileAppUsersListScreen() {
     const [usersList, setusersList] = useState([])

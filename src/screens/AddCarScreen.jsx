@@ -4,7 +4,7 @@ import { Check } from 'tabler-icons-react';
 import { useNotifications, showNotification } from '@mantine/notifications';
 import Modal from 'react-modal';
 
-const baseURL = "http://franzer.net/api";
+const baseURL = "https://franzer.net/api";
 
 
 export function AddCarScreen() {
@@ -52,7 +52,7 @@ export function AddCarScreen() {
 
     const saveCardata = async () => {
         const formdata = new FormData();
-        // formdata.append("photo", photoField.current.files[0]);
+        formdata.append("photo", photoField.current.files[0]);
         formdata.append("genre", genre);
         formdata.append("marque", marque);
         formdata.append("matricule", matricule);

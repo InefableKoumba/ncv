@@ -3,7 +3,7 @@ import { Autocomplete, Modal } from '@mantine/core';
 import QRCode from 'qrcode.react';
 import ReactToPrint from 'react-to-print';
 
-const baseURL = "http://franzer.net/api"
+const baseURL = "https://franzer.net/api"
 
 export function GenerateQRCodeScreen() {
     const [confirmationModalIsOpened, setconfirmationModalIsOpened] = useState(false);

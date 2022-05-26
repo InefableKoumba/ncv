@@ -4,7 +4,7 @@ import { Bill } from "./../components/Bill"
 import moment from 'moment';
 moment().format();
 
-const baseURL = "http://franzer.net/api"
+const baseURL = "https://franzer.net/api"
 
 export function BillsListScreen() {
     const [billsList, setbillsList] = useState([])

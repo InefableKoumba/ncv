@@ -22,7 +22,7 @@ function App() {
   }, [token])
   return (
     <div>
-      {!token ? <LoginScreen setToken={setToken} /> : (<div className="flex">
+      <div className="flex">
         <aside className="h-screen px-2 w-96">
           <div className="my-6 flex justify-center">
             <svg className="w-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 713 557.76">
@@ -239,8 +239,7 @@ function App() {
             </Routes>
           </div>
         </div>
-      </div>)
-      }
+      </div>
     </div>
   );
 }
