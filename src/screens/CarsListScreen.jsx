@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import QRCode from 'qrcode.react';
 import ReactToPrint from 'react-to-print';
 
-const baseURL = "https://franzer.net/api"
+const baseURL = "https://ncvserver.herokuapp.com/api"
 
 export function CarsListScreen() {
     const [carId, setcarId] = useState("")

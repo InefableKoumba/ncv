@@ -3,7 +3,7 @@ import { Check } from 'tabler-icons-react';
 import { showNotification } from '@mantine/notifications';
 import Modal from 'react-modal';
 
-const baseURL = "https://franzer.net/api";
+const baseURL = "https://ncvserver.herokuapp.com/api";
 
 
 export function AddCarScreen() {

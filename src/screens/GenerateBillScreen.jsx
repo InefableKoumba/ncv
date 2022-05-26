@@ -4,7 +4,7 @@ import { showNotification } from '@mantine/notifications';
 import { Check, X } from 'tabler-icons-react';
 import { Bill } from "../components/Bill";
 
-const baseURL = "https://franzer.net/api"
+const baseURL = "https://ncvserver.herokuapp.com/api"
 
 export function GenerateBillScreen() {
     let selectedCarId = null

@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const baseURL = "https://franzer.net/api"
+const baseURL = "https://ncvserver.herokuapp.com/api"
 
 export function LoginScreen({ setToken }) {
     const [email, setemail] = useState(null)

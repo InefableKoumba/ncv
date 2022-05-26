@@ -4,7 +4,7 @@ import { Bill } from "./../components/Bill"
 import moment from 'moment';
 moment().format();
 
-const baseURL = "https://franzer.net/api"
+const baseURL = "https://ncvserver.herokuapp.com/api"
 
 export function BillsListScreen() {
     const [billsList, setbillsList] = useState([])
