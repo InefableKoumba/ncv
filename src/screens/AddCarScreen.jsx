@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import { Notification } from '@mantine/core';
 import { Check } from 'tabler-icons-react';
-import { useNotifications, showNotification } from '@mantine/notifications';
+import { showNotification } from '@mantine/notifications';
 import Modal from 'react-modal';
 
 const baseURL = "https://franzer.net/api";

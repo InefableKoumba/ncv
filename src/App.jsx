@@ -11,7 +11,6 @@ import { BillsListScreen } from "./screens/BillsListScreen"
 import { MobileAppScanHistoryScreen } from "./screens/MobileAppScanHistoryScreen"
 import { DeleteMobileAppUserScreen } from "./screens/DeleteMobileAppUserScreen"
 import { useState, useEffect } from "react";
-import { LoginScreen } from "./screens/LoginScreen";
 
 function App() {
   const [token, setToken] = useState(null)
