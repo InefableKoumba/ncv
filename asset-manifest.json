@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/ncv/static/css/main.82794ca2.css",
+    "main.js": "/ncv/static/js/main.2ea06813.js",
+    "static/js/787.351447f3.chunk.js": "/ncv/static/js/787.351447f3.chunk.js",
+    "static/media/franzer-logo.png": "/ncv/static/media/franzer-logo.07f147c2888d04335409.png",
+    "index.html": "/ncv/index.html",
+    "main.82794ca2.css.map": "/ncv/static/css/main.82794ca2.css.map",
+    "main.2ea06813.js.map": "/ncv/static/js/main.2ea06813.js.map",
+    "787.351447f3.chunk.js.map": "/ncv/static/js/787.351447f3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82794ca2.css",
+    "static/js/main.2ea06813.js"
+  ]
+}
