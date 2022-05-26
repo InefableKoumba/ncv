@@ -101,6 +101,7 @@ export function GenerateBillScreen() {
                     readableExpirationDate: generatedBill.readableExpirationDate,
                     carOwnerId: generatedBill.car.ownerId,
                     carOwnerName: generatedBill.car.owner.name,
+                    creationHour: generatedBill.creationHour,
                     carOwnerTelephone: generatedBill.car.owner.telephone
                 }} /> :
                 (<>
