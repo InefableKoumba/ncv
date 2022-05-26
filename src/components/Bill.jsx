@@ -1,5 +1,6 @@
 
 import franzerLogo from "./../img/franzer-logo.png"
+import QrCodeImg from "./../img/qr-code.png"
 import ReactToPrint from 'react-to-print';
 import { Table } from "@mantine/core";
 import { useRef } from "react";
@@ -10,7 +11,8 @@ export function Bill({ data }) {
         carOwnerId, carOwnerName,
         carOwnerTelephone,
         readableCreationDate,
-        readableExpirationDate
+        readableExpirationDate,
+        creationHour
     } = data
     const billRef = useRef();
     const pageStyle = `
@@ -43,20 +45,22 @@ export function Bill({ data }) {
                 <div className='bg-gray-100 p-8 rounded flex w-max gap-x-20'>
                     <div className='flex flex-col gap-y-2'>
                         <span className='whitespace-nowrap'>Paiement éffectué le :</span>
-                        <span className='whitespace-nowrap'>Paiement éffectué à :</span>
                         <span className='whitespace-nowrap'>Expire le :</span>
+                        <span className='whitespace-nowrap'>Paiement éffectué à :</span>
                         <span className='whitespace-nowrap'>ID du client :</span>
                         <span className='whitespace-nowrap'>Nom du client:</span>
                         <span className='whitespace-nowrap'>Contact client :</span>
+                        <span className='whitespace-nowrap'>Termes de paiement :</span>
                     </div>
                     <div className='flex flex-col gap-y-2'>
                         <span className='whitespace-nowrap'>{readableCreationDate}</span>
-                        <span className='whitespace-nowrap'>14H37
-                        </span>
                         <span className='whitespace-nowrap'>{readableExpirationDate}</span>
+                        <span className='whitespace-nowrap'>{creationHour}
+                        </span>
                         <span className='whitespace-nowrap'>{carOwnerId}</span>
                         <span className='whitespace-nowrap'>{carOwnerName} {carOwnerFirstName}</span>
                         <span className='whitespace-nowrap'>{carOwnerTelephone}</span>
+                        <span className='whitespace-nowrap'>Espèces</span>
                     </div>
                 </div>
                 <div className='my-10'>
@@ -69,8 +73,8 @@ export function Bill({ data }) {
                                     <th>Quantité</th>
                                     <th>PU HT</th>
                                     <th>Durée (année)</th>
-                                    <th>TVA</th>
-                                    <th>CA</th>
+                                    <th>TVA(18%)</th>
+                                    <th>CA(5%)</th>
                                     <th>Total TTC</th>
                                 </tr>
                             </thead>
@@ -88,20 +92,26 @@ export function Bill({ data }) {
                         </Table>
                     </div>
                 </div>
-                <div className='flex justify-end gap-x-6 mt-20'>
-                    <div className='flex flex-col'>
-                        <span className='text-lg font-bold'>Siège social</span>
-                        <span className='text-sm'>22 Rue Bakoukouyas, <br />
-                            Poto-Poto, Brazzaville, <br />
-                            Rep. Congo
-                        </span>
+                <div className='flex justify-between items-center gap-x-6 mt-20'>
+                    <div>
+                        <img src={QrCodeImg} className="w-44" alt="" srcset="" />
                     </div>
-                    <div className='flex flex-col'>
-                        <span className='text-lg font-bold'>Coordonnées</span>
-                        <span className='text-sm'>Téléphone : +242066650750</span>
-                        <span className='text-sm'>Email : contact@franzer.org</span>
-                        <span className='text-sm'>www.franzer.org</span>
+                    <div className="flex gap-x-20">
+                        <div className='flex flex-col'>
+                            <span className='text-lg font-bold'>Siège social</span>
+                            <span className='text-sm'>22 Rue Bakoukouyas, <br />
+                                Poto-Poto, Brazzaville, <br />
+                                Rep. Congo
+                            </span>
+                        </div>
+                        <div className='flex flex-col'>
+                            <span className='text-lg font-bold'>Coordonnées</span>
+                            <span className='text-sm'>Téléphone : +242066650750</span>
+                            <span className='text-sm'>Email : contact@franzer.org</span>
+                            <span className='text-sm'>www.franzer.org</span>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

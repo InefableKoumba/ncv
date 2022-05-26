@@ -55,7 +55,8 @@ export function BillsListScreen() {
                     readableExpirationDate: selectedBill.readableExpirationDate,
                     carOwnerId: selectedBill.car.ownerId,
                     carOwnerName: selectedBill.car.owner.name,
-                    carOwnerTelephone: selectedBill.car.owner.telephone
+                    carOwnerTelephone: selectedBill.car.owner.telephone,
+                    creationHour: selectedBill.creationHour
                 }} />
             </div> : (
                 <div className="bg-white py-10">
