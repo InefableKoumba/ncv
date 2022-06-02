@@ -10,8 +10,10 @@ export function CarOwnersListScreen() {
 
     const findCarsByOwnerId = async (id) => {
         try {
-            const response = await fetch(`${baseURL}/cars/${id}`)
+            const response = await fetch(`${baseURL}/cars/findByOwnerId/${id}`)
             const cars = await response.json();
+            console.log("RESPONSE")
+            console.log(cars)
             setcars(cars)
             setOpened(true)
         } catch (error) {

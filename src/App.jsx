@@ -10,6 +10,8 @@ import { GenerateBillScreen } from "./screens/GenerateBillScreen"
 import { BillsListScreen } from "./screens/BillsListScreen"
 import { MobileAppScanHistoryScreen } from "./screens/MobileAppScanHistoryScreen"
 import { DeleteMobileAppUserScreen } from "./screens/DeleteMobileAppUserScreen"
+import { AddAdministrateurs } from "./screens/AddAdministrateurs"
+import { AdministrateursList } from "./screens/AdministrateursList"
 import { useState, useEffect } from "react";
 
 function App() {
@@ -209,8 +211,15 @@ function App() {
                   <a href="/delete_mobile_app_user" className="block w-full text-gray-700 rounded">
                     Supprimer un utilisateur
                   </a>
-                  <a href="/mobile_app_scan_history" className="block w-full text-gray-700 rounded">
-                    Historique des scans
+                </Group>
+              </Accordion.Item>
+              <Accordion.Item label={<Text className="font-semibold">Adminitrateurs</Text>}>
+                <Group noWrap className="flex flex-col">
+                  <a href="/administrateur_list" className="block w-full text-gray-700 rounded">
+                    Liste des administrateur
+                  </a>
+                  <a href="/add_administrateur" className="block w-full text-gray-700 rounded">
+                    Ajouter un administrateur
                   </a>
                 </Group>
               </Accordion.Item>
@@ -235,6 +244,8 @@ function App() {
               <Route path="add_mobile_app_user" element={<AddMobileAppUserScreen />} />
               <Route path="delete_mobile_app_user" element={<DeleteMobileAppUserScreen />} />
               <Route path="mobile_app_scan_history" element={<MobileAppScanHistoryScreen />} />
+              <Route path="administrateur_list" element={<AdministrateursList />} />
+              <Route path="add_administrateur" element={<AddAdministrateurs />} />
             </Routes>
           </div>
         </div>
