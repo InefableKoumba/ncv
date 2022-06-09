@@ -59,39 +59,44 @@ export function BillsListScreen() {
                     creationHour: selectedBill.creationHour
                 }} />
             </div> : (
-                <div className="bg-white py-10">
-                    <Table>
-                        <thead>
-                            <tr>
-                                <th>Code</th>
-                                <th>Matricule</th>
-                                <th>Date création</th>
-                                <th>Date expiration</th>
-                                <th>Déjà imprimé</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {billsList.map((bill) => (
-                                <tr key={bill.code}>
-                                    <td>{bill.code}</td>
-                                    <td>{bill.car.matricule}</td>
-                                    <td>{bill.readableCreationDate}</td>
-                                    <td>{bill.readableExpirationDate}</td>
-                                    <td>{bill.alreadyUsedForPrinting ? "Déjà" : "Pas encore"}</td>
-                                    <td>
-                                        <button
-                                            onClick={() => {
-                                                setselectedBill(bill)
-                                                setisBillOpen(true)
-                                            }}
-                                            className="bg-blue-800 text-white px-2 py-1 rounded">
-                                            Ouvrir
-                                        </button>
-                                    </td>
-                                </tr>))}
-                        </tbody>
-                    </Table>
+                <div>
+                    <div className="bg-white py-10">
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <th>Code</th>
+                                    <th>Matricule</th>
+                                    <th>Date création</th>
+                                    <th>Date expiration</th>
+                                    <th>Déjà imprimé</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {billsList.map((bill) => (
+                                    <tr key={bill.code}>
+                                        <td>{bill.code}</td>
+                                        <td>{bill.car.matricule}</td>
+                                        <td>{bill.readableCreationDate}</td>
+                                        <td>{bill.readableExpirationDate}</td>
+                                        <td>{bill.alreadyUsedForPrinting ? "Déjà" : "Pas encore"}</td>
+                                        <td>
+                                            <button
+                                                onClick={() => {
+                                                    setselectedBill(bill)
+                                                    setisBillOpen(true)
+                                                }}
+                                                className="bg-blue-800 text-white px-2 py-1 rounded">
+                                                Ouvrir
+                                            </button>
+                                        </td>
+                                    </tr>))}
+                            </tbody>
+                        </Table>
+                    </div>
+                    <div className="text-center py-4">
+                        <button className="px-4 py-2 text-white rounded bg-blue-700">Imprimer</button>
+                    </div>
                 </div>
             )}
         </div>
