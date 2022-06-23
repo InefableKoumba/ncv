@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Check } from 'tabler-icons-react';
+import { Check, Error404 } from 'tabler-icons-react';
 import { showNotification } from '@mantine/notifications';
 import Modal from 'react-modal';
 
@@ -109,6 +109,22 @@ export function AddCarScreen() {
                         title: "Notification",
                         message: 'Les données ont été enregistrées avec succès',
                         icon: <Check color="#" />,
+                    })
+                    closeModal()
+                } else if (response.status === 409) {
+                    showNotification({
+                        autoClose: 30000,
+                        title: "Notification",
+                        message: 'Matricule déjà pris',
+                        icon: <Error404 color="#" />,
+                    })
+                    closeModal()
+                } else {
+                    showNotification({
+                        autoClose: 30000,
+                        title: "Notification",
+                        message: "Une erreur s'est produite",
+                        icon: <Error404 color="#" />,
                     })
                     closeModal()
                 }
